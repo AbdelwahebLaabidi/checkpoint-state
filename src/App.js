@@ -1,8 +1,8 @@
 
 import React from 'react';
 import './App.css';
-import Person from './component/Person';
 import Texto from './component/Texto';
+import Profil from './component/Profil';
 
 
 
@@ -18,8 +18,8 @@ class App extends React.Component {
   render(){
     return(
       <div>
-          <button onClick={()=> this.setState({show : !this.state.show}) }>show</button>
-          { this.state.show && <Person/>}
+          <button style={{color : this.state.show ? 'red': 'green'}} onClick={()=> this.setState({show : !this.state.show})}> {this.state.show ? 'Hide': 'Show'} </button>
+          { this.state.show && <Profil/>}
         <br/>
           <Texto/>
       </div>
